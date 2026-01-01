@@ -58,12 +58,6 @@ footer {
     text-align: right;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
 .cert {
     font-size: 25px;
     font-weight: bold;
@@ -89,6 +83,18 @@ footer {
     font-size: 20px;
     margin-right: 50px;
     margin-top: 0px;
+}
+
+#grid-strength {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#grid-project {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 #certification {
