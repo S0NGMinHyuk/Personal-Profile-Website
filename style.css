@@ -1,22 +1,27 @@
+:root {
+    --woori-blue: rgb(0,103,172); 
+    --woori-light-blue: rgb(0,131,202);
+}
+
 html {
     height: 100%;
-    /* background-color: ivory; */
 }
 
 body {
     height: 100%;
     margin: 0px;
-    justify-content: center;
 }
 
 header {
     margin: 0px;
     padding: 20px 40px 0px 50px;
-    color: rgb(0, 103, 172);
+    color: var(--woori-blue);
 }
 
 main {
-    margin: 0% 20% 5% 20%;
+    max-width: 1100px;
+    margin: 0 auto 5%;
+    padding: 0 20px;
 }
 
 section {
@@ -24,106 +29,130 @@ section {
 }
 
 footer {
-    padding: 30px 20%;
     background-color: aliceblue;
-    text-align: right;
 }
 
 .big-title {
     font-size: 50px;
     font-weight: bolder;
     font-style: italic;
-    margin: 100px 100px 75px 100px;
+    margin: 100px 0 75px;
     display: flex;
     justify-content: center;
 }
-.big-title:nth-of-type(1) {
-    margin: 90px 100px 75px 100px;
+main > section:first-child .big-title {
+    margin: 90px 0 75px;
 }
 
 .subtitle {
-    color: rgb(0, 131, 202);
+    color: var(--woori-light-blue);
     font-weight: bold;
 }
 
 .card {
-    background-color: white;
     box-shadow: 4px 4px 8px rgb(142, 142, 142);
-    border: 2px solid rgb(0, 103, 172);
+    border: 2px solid var(--woori-blue);
     padding: 15px 30px;
     border-radius: 10px;
+    transition: background-color 0.25s ease;
 }
 .card:hover {
     background-color: aliceblue;
 }
 
-.activity {
+
+/* about 관련 css 클래스 */
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    width: 275px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    font-size: 20px;
+    margin-right: 50px;
+    margin-top: 0px;
+}
+
+
+/* strength 관련 css 클래스 */
+.strength-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* project 관련 css 클래스 */
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.project-item {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-.timeline {
+.project-item-timeline {
     color: gray;
     text-align: right;
 }
 
-.cert {
+
+/* certification 관련 css 클래스 */
+.certifications {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.certification-item {
     font-size: 25px;
     font-weight: bold;
     padding: 15px;
     margin: 0px 10px;
     border-radius: 10px;
     background-color: rgb(235, 235, 235);
-    color: rgb(0, 103, 172);
+    color: var(--woori-blue);
 
     /* 천천히 그림자 들어가게 하는 기능 */
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
-.cert:hover {
+.certification-item:hover {
     box-shadow: 0px 0px 10px gray;
-
-    /* 천천히 그림자 나오게 하는 기능 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.cert-date {
+.certification-item-date {
     font-size: 15px;
     font-weight: normal;
     color: gray;
 }
 
-#about {
-    display: flex;
-    align-items: center;
+
+/* footer 관련 css 클래스 */
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: right;
 }
 
-#profile-image {
-    width: 275px;
-    height: auto;
-    border-radius: 10px;
-    /* float: left; */
-}
 
-#profile-text {
-    font-size: 20px;
-    margin-right: 50px;
-    margin-top: 0px;
-}
-
-#grid-strength {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-#grid-project {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-#certification {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
+/* 화면이 작아지는 경우 레이아웃 변경 */
+@media (max-width: 780px) {
+    .about { flex-direction: column; gap: 16px; }
+    .strength-list { grid-template-columns: 1fr; }
+    .project-item { grid-template-columns: 1fr; }
+    .project-item-timeline { text-align: left; }
+    .certifications { 
+        grid-template-columns: 1fr; 
+        gap: 20px 0;
+    }
 }
