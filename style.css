@@ -44,10 +44,13 @@ footer {
 
 .card {
     background-color: white;
-    box-shadow: 5px 5px 10px rgb(142, 142, 142);
+    box-shadow: 4px 4px 8px rgb(142, 142, 142);
     border: 2px solid rgb(0, 103, 172);
     padding: 15px 30px;
     border-radius: 10px;
+}
+.card:hover {
+    background-color: aliceblue;
 }
 
 .activity {
@@ -68,9 +71,15 @@ footer {
     border-radius: 10px;
     background-color: rgb(235, 235, 235);
     color: rgb(0, 103, 172);
+
+    /* 천천히 그림자 들어가게 하는 기능 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .cert:hover {
     box-shadow: 0px 0px 10px gray;
+
+    /* 천천히 그림자 나오게 하는 기능 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .cert-date {
@@ -81,6 +90,7 @@ footer {
 
 #about {
     display: flex;
+    align-items: center;
 }
 
 #profile-image {
