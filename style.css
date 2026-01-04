@@ -16,7 +16,11 @@ header {
 }
 
 main {
-    margin: 10% 20%;
+    margin: 0% 20% 5% 20%;
+}
+
+section {
+    padding: 0px 0px 125px 0px;
 }
 
 footer {
@@ -29,7 +33,7 @@ footer {
     font-size: 50px;
     font-weight: bolder;
     font-style: italic;
-    margin: 150px 100px 75px 100px;
+    margin: 100px 100px 75px 100px;
     display: flex;
     justify-content: center;
 }
