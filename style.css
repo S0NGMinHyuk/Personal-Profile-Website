@@ -36,24 +36,26 @@ footer {
     font-size: 50px;
     font-weight: bolder;
     font-style: italic;
-    margin: 100px 0 75px;
+    margin: 75px 0;
     display: flex;
     justify-content: center;
 }
 main > section:first-child .big-title {
-    margin: 90px 0 75px;
+    margin: 100px 0 75px;
 }
 
 .subtitle {
     color: var(--woori-light-blue);
+    font-size: 20px;
     font-weight: bold;
 }
 
 .card {
     box-shadow: 4px 4px 8px rgb(142, 142, 142);
     border: 2px solid var(--woori-blue);
-    padding: 15px 30px;
+    padding: 8px 30px 15px;
     border-radius: 10px;
+    font-size: 18px;
     transition: background-color 0.25s ease;
 }
 .card:hover {
@@ -74,7 +76,7 @@ main > section:first-child .big-title {
 }
 
 .about-text {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 50px;
     margin-top: 0px;
 }
@@ -98,6 +100,10 @@ main > section:first-child .big-title {
 .project-item {
     display: grid;
     grid-template-columns: 2fr 1fr;
+}
+
+.project-item-content {
+    line-height: 10px;
 }
 
 .project-item-timeline {
